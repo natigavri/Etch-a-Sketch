@@ -1,0 +1,57 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+font-size: 100%; /* Base font size */
+}
+
+/* Buttons */
+button {
+font-size: large;
+background-color: rgb(133,133,172); /* Button color */
+color: white; /* Button text color */
+border: none; /* No border */
+padding: 0.5rem 1rem; /* Padding */
+border-radius: 4px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor */
+}
+
+button:hover {
+background-color: #0056b3; /* Darker button color on hover */
+}
+/* Links */
+a {
+color: #007BFF; /* Link color */
+text-decoration: none; /* No underline */
+}
+
+a:hover {
+text-decoration: underline; /* Underline on hover */
+}
+/* Utility classes */
+.text-center {
+text-align: center; /* Center text */
+}
+
+.container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: space-around;
+max-width: 850px; /*Container max width */
+/* min-width: 100px; */
+margin: 0 auto; /* Center the container */
+padding: 1rem; /* Padding */
+gap: 1px;
+}
+
+.square {
+    background-color: gray;
+    width: 50px;
+    height: 50px;
+    border: white solid 1px;
+}
