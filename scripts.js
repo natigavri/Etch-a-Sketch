@@ -1,9 +1,9 @@
-let defGrid = 16;
+let gridSize = 16;
 const grid = document.querySelector("#grid");
-for (let i = 0; i < defGrid; i++) {
+for (let i = 0; i < gridSize; i++) {
     let row = document.createElement("div");
     row.setAttribute("class", "row");
-    for(let j = 0; j < defGrid; j++){
+    for(let j = 0; j < gridSize; j++){
         let newDiv = document.createElement("div");
         newDiv.setAttribute("class", "square");
         row.appendChild(newDiv);
@@ -25,3 +25,28 @@ addEventListener("mouseover", (e) => {
         }
     }
 })
+
+function reGrid(newGridSize) {
+    const grid = document.querySelector("#grid");
+    while(grid.hasChildNodes()) {
+      grid.removeChild(grid.firstChild); 
+    }
+    for (let i = 0; i < newGridSize; i++) {
+        let row = document.createElement("div");
+        row.setAttribute("class", "row");
+        for(let j = 0; j < newGridSize; j++){
+            let newDiv = document.createElement("div");
+            newDiv.setAttribute("class", "square");
+            row.appendChild(newDiv);
+    
+        }
+        grid.appendChild(row);
+    } 
+}
+const gridSizeBtn = document.querySelector(".gridSizeBtn");
+gridSizeBtn.addEventListener('click', (event) => {
+    let newGridSize = Number(prompt("Enter grid size (2-100):"));
+    if (newGridSize > 1 && newGridSize < 101) {
+        reGrid(newGridSize);
+    }
+    });
