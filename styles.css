@@ -52,10 +52,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-content: center;
-max-width: 960px; /*Container max width */
+max-width: 960px; 
 max-height: 960px; 
-width: 960px;
-height: 960px;
+width: 50vw;
+height: 50vw;
 margin: 0 auto; /* Center the container */
 padding: 0;
 background-color: rgb(248, 248, 248);
